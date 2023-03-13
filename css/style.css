@@ -130,6 +130,24 @@ header {
   text-transform: UPPERCASE;
 }
 
+.Header-Menu li::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0%;
+  width: 100%;
+  height: 3px;
+  background-color: #896b76;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.Header-Menu li:hover::before {
+  opacity: 1;
+}
+
 .Header-Menu a {
   position: relative;
   text-decoration: none;
@@ -156,8 +174,8 @@ header {
   width: 100%;
   height: auto;
   display: none;
-  background: -o-linear-gradient(91deg, #cdbcaa, rgba(255, 235, 213, 0.9803921569));
-  background: linear-gradient(359deg, #cdbcaa, rgba(255, 235, 213, 0.9803921569));
+  background: -o-linear-gradient(91deg, #cdbcaa, rgb(213, 196, 178));
+  background: linear-gradient(359deg, #cdbcaa, rgb(213, 196, 178));
   border-radius: 0px 0px 20px 20px;
   -webkit-box-shadow: 0px 7px 17px -4px #373b3e;
   box-shadow: 0px 7px 17px -4px #373b3e;
@@ -165,9 +183,9 @@ header {
 }
 
 .header-phone-color {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f5e1cc), color-stop(#fbf3ea), color-stop(#fbf3ea), color-stop(#fbf3ea), color-stop(#fbf3ea), to(#fbf3ea));
-  background: -o-linear-gradient(bottom, #f5e1cc, #fbf3ea, #fbf3ea, #fbf3ea, #fbf3ea, #fbf3ea);
-  background: linear-gradient(0deg, #f5e1cc, #fbf3ea, #fbf3ea, #fbf3ea, #fbf3ea, #fbf3ea);
+  background: -webkit-gradient(linear, left bottom, left top, from(#d4c3b0), color-stop(#fbf3ea), color-stop(#fbf3ea), color-stop(#fbf3ea), color-stop(#fbf3ea), to(#fbf3ea));
+  background: -o-linear-gradient(bottom, #d4c3b0, #fbf3ea, #fbf3ea, #fbf3ea, #fbf3ea, #fbf3ea);
+  background: linear-gradient(0deg, #d4c3b0, #fbf3ea, #fbf3ea, #fbf3ea, #fbf3ea, #fbf3ea);
 }
 
 .header-phone-blocks-close {
@@ -308,6 +326,7 @@ header {
 
 .About-blocks-info h3 {
   position: relative;
+  font-family: Cinzel;
   font-size: 35px;
   font-weight: 700;
   color: black;
@@ -316,9 +335,27 @@ header {
 
 .About-blocks-info p {
   position: relative;
+  font-family: Bodoni Moda;
   font-size: 18px;
   font-weight: 300;
   color: black;
+}
+
+.About-block-spisok {
+  position: relative;
+  width: 100%;
+  height: auto;
+  list-style: none;
+  padding: 0px;
+}
+
+.About-block-spisok li {
+  position: relative;
+  font-family: Bodoni Moda;
+  font-size: 17px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .info-About {
@@ -452,12 +489,12 @@ header {
 
 .Gallery-close {
   position: absolute;
-  top: 0;
-  right: 0%;
+  bottom: 96%;
+  left: 100%;
   font-size: 20px;
   font-weight: 700;
-  color: white;
-  margin: 20px;
+  color: #fff;
+  margin: 0px 10px;
   cursor: pointer;
 }
 
@@ -483,6 +520,69 @@ header {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.Gallery-link-block {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: antiquewhite;
+  margin: 0px;
+}
+
+.Gallery-blocks-link {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.Gallery-btn {
+  position: relative;
+  padding: 15px 20px;
+  background: #6a4d4c;
+  color: #faebd7;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 10px;
+  outline: none;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.Gallery-btn img {
+  position: relative;
+  width: 50px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.Gallery-btn:hover {
+  background: #4c3230;
+  font-weight: 400;
+  color: #faebd7;
+}
+
+.Gallery-btn:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.Gallery-btn:active {
+  background: #4c3230 !important;
+  color: #faebd7 !important;
+  border: none !important;
+}
+
+.Gallery-img-link-dark {
+  display: none;
 }
 
 /*______________________________________________________________________________________________________________________________*/
@@ -648,8 +748,8 @@ header {
   position: absolute;
   top: 0;
   right: 50%;
-  font-family: Pacifico;
-  font-size: 2vw;
+  font-family: Bad Script;
+  font-size: 3vw;
   font-weight: 400;
   color: #c196a5;
   -webkit-transform: translate(55%, -115%) rotate3d(117, -64, 12, 55deg) scale(1.3);
@@ -1049,7 +1149,7 @@ header {
   text-align: left;
   font-size: 20px;
   font-weight: 300;
-  color: #cdcdcd;
+  color: #96727f;
   outline: none;
   padding: 13px 10px;
   display: block;
@@ -1072,7 +1172,7 @@ header {
   text-align: left;
   font-size: 20px;
   font-weight: 300;
-  color: #cdcdcd;
+  color: #96727f;
   outline: none;
   padding: 20px 20px;
   -webkit-transition: 0.4s;
@@ -1323,7 +1423,41 @@ footer {
   opacity: 1;
 }
 
+.link-instagram {
+  position: relative;
+}
+
+.link-instagram::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 50px;
+  height: 50px;
+  background: url("../img/icons-instagram-grey.png") no-repeat 50% 50%/cover;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.link-instagram:hover::after {
+  opacity: 1;
+}
+
 /*______________________________________________________________________________________________________________________________*/
+
+@media only screen and (min-width: 768px) and (min-height: 1024px) {
+  .Gallery-modal-window {
+    top: 33%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+  .Gallery-modal-window {
+    top: 33%;
+  }
+}
 
 @media only screen and (max-width: 991px) {
   .info-About {
@@ -1336,7 +1470,7 @@ footer {
   }
 
   .Content-blocks-info h3::before {
-    font-size: 2vw;
+    font-size: 3vw;
     -webkit-transform: translate(65%, -115%) rotate3d(117, -64, 20, 61deg) scale(1.6);
     transform: translate(65%, -115%) rotate3d(117, -64, 20, 61deg) scale(1.6);
   }
@@ -1394,6 +1528,11 @@ footer {
     font-size: 7vw;
   }
 
+  .Content-blocks-info h3::before {
+    -webkit-transform: translate(80%, -115%) rotate3d(117, -64, 20, 61deg) scale(1.8);
+    transform: translate(80%, -115%) rotate3d(117, -64, 20, 61deg) scale(1.8);
+  }
+
   .Content-blocks-info p {
     font-size: 3vw;
   }
@@ -1446,12 +1585,13 @@ footer {
 
   .Header-top-phone {
     font-size: 3vw;
+    margin: 15px;
   }
 
   .Header-top-phone::before {
-    -webkit-transform: translate(7px, -43%) rotate(40deg);
-    -ms-transform: translate(7px, -43%) rotate(40deg);
-    transform: translate(7px, -43%) rotate(40deg);
+    -webkit-transform: translate(-2px, -43%) rotate(40deg);
+    -ms-transform: translate(-2px, -43%) rotate(40deg);
+    transform: translate(-2px, -43%) rotate(40deg);
   }
 
   .Header-blocks-img img {
@@ -1469,12 +1609,21 @@ footer {
 
   .Content-blocks-info h3::before {
     font-size: 3vw;
-    -webkit-transform: translate(56%, -134%) rotate3d(117, -64, 20, 59deg) scale(1.4);
-    transform: translate(56%, -134%) rotate3d(117, -64, 20, 59deg) scale(1.4);
+    -webkit-transform: translate(56%, -148%) rotate3d(117, -64, 8, 51deg) scale(1.7);
+    transform: translate(56%, -148%) rotate3d(117, -64, 8, 51deg) scale(1.7);
   }
 
   .Gallery-modal-window {
     width: 70vw;
+  }
+
+  .Gallery-btn {
+    font-size: 4vw;
+    padding: 3vw 5vw;
+  }
+
+  .Gallery-btn img {
+    width: 9vw;
   }
 
   .Serveses-block {
@@ -1534,6 +1683,10 @@ footer {
   }
 
   .About-blocks-info p {
+    font-size: 4vw;
+  }
+
+  .About-block-spisok li {
     font-size: 4vw;
   }
 
@@ -1601,6 +1754,10 @@ footer {
   .Header-phone-blocks {
     width: 100%;
   }
+
+  .Gallery-modal-window {
+    width: 77vw;
+  }
 }
 
 @media only screen and (max-width: 300px) {
@@ -1614,11 +1771,16 @@ footer {
     width: 40vw;
     height: 30px;
   }
+
+  .Header-top-blocks,
+  .Header-top-blocks-row {
+    width: 50vw;
+  }
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 750px) {
   .Gallery-modal-window {
-    height: 90vh;
+    height: 88vh;
   }
 }
 
@@ -1637,3 +1799,5 @@ footer {
 .webp .link-telegram::after{ background: url(../img/icons8-telegram-grey.webp) no-repeat 50% 50%/cover; }
 
 .webp .link-watsapp::after{ background: url(../img/icons-grey-whatsapp.webp) no-repeat 50% 50%/cover; }
+
+.webp .link-instagram::after{ background: url(../img/icons-instagram-grey.webp) no-repeat 50% 50%/cover; }
